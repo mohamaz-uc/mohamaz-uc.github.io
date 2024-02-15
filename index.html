@@ -73,8 +73,9 @@
         </ul>
       </nav><!-- .nav-menu -->
     </div>
-      <button type="button" class="btn btn-primary" onclick="changeBackground()">Change Background</button>
-  </header><!-- End Header -->
+    <button type="button" class="btn btn-primary" onclick="changeBackground()">Change Background</button>
+  </header>
+  <!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
@@ -394,9 +395,6 @@
               fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
               </script>
             </div>
-            <div id="greeting-root"></div>
-            <script src="/greetings.js"></script>
-            <div id="greetingCookie">Hello</div>
         </div>
       </section>
       
@@ -443,7 +441,6 @@
     setInterval(displayTime,500);
     function displayJoke(){
     $.get("https://v2.jokeapi.dev/joke/Programming?type=single",function(result){
-        console.log("from joke API: "+ JSON.stringify(result));
         if (result && result.joke) {
         $("#response").text("Programming joke of the day: " +result.joke);
         }
@@ -476,20 +473,6 @@
           }
           return "";
       }
-
-      function welcomeUser() {
-          const lastVisit = getCookie("lastVisit");
-          const greetingElement = document.getElementById("greetingCookie");
-          if (lastVisit) {
-              greetingElement.innerHTML = "Welcome back! Your last visit was on " + lastVisit + ".";
-          } else {
-              greetingElement.innerHTML = "Welcome to my portfolio!";
-          }
-          const now = new Date();
-          setCookie("lastVisit", now.toLocaleString(), 365);
-      }
-
-      welcomeUser();
   </script>
 
       <!-- Template Main JS File -->
