@@ -73,6 +73,7 @@
         </ul>
       </nav><!-- .nav-menu -->
     </div>
+      <button type="button" class="btn btn-primary" onclick="changeBackground()">Change Background</button>
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
@@ -418,6 +419,13 @@
   
   <script src="/email.js"></script>
   <script type=text/javascript>
+    function changeBackground() {
+    var backgrounds = ['#040b14', '#183e01', '#664f02', '#026628'];
+    var randomIndex = Math.floor(Math.random() * backgrounds.length);
+    var selectedBackground = backgrounds[randomIndex];
+    
+    document.getElementById('header').style.background = selectedBackground;
+  }
     var canvas=document.getElementById("analog-clock");
 			var ctx=canvas.getContext("2d");
 			var radius = canvas.height/2;
