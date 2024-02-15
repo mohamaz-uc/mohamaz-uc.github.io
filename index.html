@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>iPortfolio Bootstrap Template - Index</title>
+  <title>Resume- Afroz Mohammad</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -16,7 +16,7 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-  <!-- Vendor CSS Files -->
+  <!--Bootstrap Vendor CSS Files -->
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -25,6 +25,73 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <link href="assets/css/style.css" rel="stylesheet">
+  <script type=text/javascript>
+    var canvas=document.getElementById("analog-clock");
+			var ctx=canvas.getContext("2d");
+			var radius = canvas.height/2;
+			ctx.translate(radius,radius);
+			radius=radius*0.90;
+			setInterval(drawClock,1000);
+			function drawClock(){
+				drawFace(ctx,radius);
+				drawNumbers(ctx,radius);
+				drawTime(ctx,radius);
+			}
+  function displayTime() {
+    document.getElementById('digital-clock').innerText=" The current Time is : "+ Date();
+  }
+  setInterval(displayTime,500);
+  function displayJoke(){
+  $.get("https://v2.jokeapi.dev/joke/Programming?type=single",function(result){
+      console.log("from joke API: "+ JSON.stringify(result));
+      if (result && result.joke) {
+      $("#response").text("Programming joke of the day: " +result.joke);
+      }
+      else{
+      $("#response").text("Could not retrieve a joke at this time.");	
+      }
+    });
+  }
+  displayJoke();
+  setInterval(displayJoke,60*1000);
+      function setCookie(name, value, expiryDays) {
+          const d = new Date();
+          d.setTime(d.getTime() + (expiryDays*24*60*60*1000));
+          let expires = "expires="+ d.toUTCString();
+          document.cookie = name + "=" + value + ";" + expires + ";path=/";
+      }
+
+      function getCookie(name) {
+          let cookieName = name + "=";
+          let decodedCookie = decodeURIComponent(document.cookie);
+          let ca = decodedCookie.split(';');
+          for(let i = 0; i <ca.length; i++) {
+              let c = ca[i];
+              while (c.charAt(0) == ' ') {
+                  c = c.substring(1);
+              }
+              if (c.indexOf(cookieName) == 0) {
+                  return c.substring(cookieName.length, c.length);
+              }
+          }
+          return "";
+      }
+
+      function welcomeUser() {
+          const lastVisit = getCookie("lastVisit");
+          const greetingElement = document.getElementById("greetingCookie");
+          if (lastVisit) {
+              greetingElement.innerHTML = "Welcome back! Your last visit was on " + lastVisit + ".";
+          } else {
+              greetingElement.innerHTML = "Welcome to my portfolio!";
+          }
+          const now = new Date();
+          setCookie("lastVisit", now.toLocaleString(), 365);
+      }
+
+      welcomeUser();
+  </script>
+
 
 </head>
 
@@ -49,12 +116,12 @@
 
       <nav id="navbar" class="nav-menu navbar">
         <ul>
-          <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
-          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-          <li><a href="#resume" class="nav-link scrollto"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-          <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
-          <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li>
-          <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+          <li><a href="#hero" class="nav-link scrollto active"><i class="bi bi-house"></i> <span>Home</span></a></li>
+          <li><a href="#about" class="nav-link scrollto"><i class="bi bi-person"></i> <span>About</span></a></li>
+          <li><a href="#resume" class="nav-link scrollto"><i class="bi bi-file-earmark"></i> <span>Resume</span></a></li>
+          <li><a href="#certi" class="nav-link scrollto"><i class="bi bi-patch-check"></i> <span>Certifications and Achievements </span></a></li>
+          <li><a href="#waph" class="nav-link scrollto"><i class="bi bi-book"></i> <span>WAPH</span></a></li>
+          <li><a href="#contact" class="nav-link scrollto"><i class="bi bi-envelope"></i> <span>Contact</span></a></li>
         </ul>
       </nav><!-- .nav-menu -->
     </div>
@@ -69,6 +136,31 @@
   </section><!-- End Hero -->
 
   <main id="main">
+
+    <section id="about" class="about">
+      <div class="container">
+          <canvas id="analog-clock" width="150" height="150" style="margin-left: 20px; background-color:#999;"></canvas>
+          <script src="https://waph-uc.github.io/clock.js"></script>
+          <div id="digital-clock"></div>
+          <!-- <div id="digital-clock"></div> -->
+          <span id="email" onclick="showhideEmail()" style="cursor: pointer; text-decoration: underline;">Display my Email</span>
+          <script src="/email.js"></script>
+          <div class="text-primary" id="response"></div>
+          <br>
+          <div class="weather-widget">
+            <a class="weatherwidget-io" href="https://forecast7.com/en/39d10n84d51/cincinnati/" data-label_1="CINCINNATI" data-label_2="WEATHER" data-theme="original" >CINCINNATI WEATHER</a>
+            <script>
+            !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];
+            if(!d.getElementById(id)){js=d.createElement(s);js.id=id;
+            js.src='https://weatherwidget.io/js/widget.min.js';
+            fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+            </script>
+          </div>
+          <div id="greeting-root"></div>
+          <script src="/greetings.js"></script>
+          <div id="greetingCookie">Hello</div>
+      </div>
+    </section>
 
     <!-- ======= About Section ======= -->
     <section id="about" class="about">
@@ -279,7 +371,7 @@
         </div>
         <div class="row" data-aos="fade-in">
 
-          <div class="col-lg-5 d-flex align-items-stretch">
+          <div class="col-lg-12 d-flex align-items-stretch">
             <div class="info">
               <div class="address">
                 <i class="bi bi-geo-alt"></i>
@@ -304,8 +396,55 @@
 
       </div>
     </section><!-- End Contact Section -->
-    <section>
+
+    <section id="certi" class="contact">
       <div class="container">
+
+        <div class="section-title">
+          <h2>Certifications and Achievements</h2>
+        </div>
+        <div class="row" data-aos="fade-in">
+
+          <div class="col-lg-12 d-flex align-items-stretch">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-award-fill"></i>
+                <h4>Java Certification</h4>
+                <p>Programming in Java - National Programme on Technology Enhanced Learning. 
+                </p>
+              </div>
+
+              <div class="email">
+                <i class="bi bi-award-fill"></i>
+                <h4>Python Certification</h4>
+                <p>Programming in Python - National Programme on Technology Enhanced Learning. 
+                </p>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-calendar-event-fill"></i>
+                <h4>Student Co-Ordinator:</h4>
+                <p>Student Coordinator for AntahPragnya (technical fest organized at my university )in 2020</p>
+              </div>
+              <div class="phone">
+                <i class="bi bi-calendar-event-fill"></i>
+                <h4>Mentor</h4>
+                <p>Was a Mentor for a workshop on “Application development through Flutter” at my university in 2019.</p>
+              </div>
+              <div class="phone">
+                <i class="bi bi-calendar-event-fill"></i>
+                <h4>Event Co-Ordinator</h4>
+                <p>Contributed to TRINAYANA-2K18 (Cultural Fest at my university) as Event Co-Ordinator by managing various events. </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section>
+      <div id="waph" class="container">
 
         <div class="section-title">
           <h2>Web Application Programming and Hacking</h2>
@@ -330,7 +469,7 @@
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
 
-  <!-- Template Main JS File -->
+      <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
 </body>
