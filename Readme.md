@@ -111,6 +111,8 @@ function changeBackground() {
     document.getElementById('header').style.background = selectedBackground;
   }
 ```
+![Before Change Background the button is clicked](images/8.png)
+![After Change Background the button is clicked](images/9.png)
 
 \pagebreak
 
