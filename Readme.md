@@ -16,7 +16,7 @@
 **Overview**: This project involved creating a front-end professional profile website deployed on GitHub pages. The technical requirements included using basic JavaScript, jQuery, React library, integrating two public APIs, and leveraging JavaScript cookies to store visitor data. Non-technical requirements involved utilizing the open-source Bootstrap framework and adding Google Analytics for page tracking. The goal was to develop a personal portfolio site hosted on GitHub cloud service by applying front-end web development skills like JavaScript, APIs, cookies, frameworks and trackers. This provided practical experience with various technologies to create an effective profile website.
 
 Link to the repository:
-[https://github.com/mohamaz-uc/mohamaz-uc.github.io/edit/main/Readme.txt](https://github.com/mohamaz-uc/mohamaz-uc.github.io/edit/main/Readme.txt)
+[https://github.com/mohamaz-uc/mohamaz-uc.github.io/edit/main/README.md](https://github.com/mohamaz-uc/mohamaz-uc.github.io/edit/main/README.md)
 
 Website URL:
 [https://mohamaz-uc.github.io/](https://mohamaz-uc.github.io/)
