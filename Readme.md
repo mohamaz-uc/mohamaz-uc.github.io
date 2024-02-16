@@ -23,7 +23,7 @@ Website URL:
 
 \pagebreak
 
-To create the personal portfolio i have downloaded a predefined bootstrap template from[https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/download/](https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/download/)and customized it as per the project requirements. This portifolio consists of professional profile with my resume, including name, headshot, contact information, background, e.g., education, my experiences and skills. Additonally, a link to new HTML page to show case the Hackathons , Labs which are completed as part of WAPH course work has been added.
+To create the personal portfolio i have downloaded a predefined bootstrap template from [https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/download/](https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/download/)and customized it as per the project requirements. This portifolio consists of professional profile with my resume, including name, headshot, contact information, background, e.g., education, my experiences and skills. Additonally, a link to new HTML page to show case the Hackathons , Labs which are completed as part of WAPH course work has been added.
 
 ![personal portfolio](images/1.png)
 
