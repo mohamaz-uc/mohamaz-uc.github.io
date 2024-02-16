@@ -114,7 +114,7 @@ function changeBackground() {
 
 \pagebreak
 
-JavaScript cookies are utilized to remember the user . If they visit the website first time "welcome to my portfolio is displayed" otherwise "welcome back to my portfolioi and time" are displayed.
+JavaScript cookies are utilized to remember the user . If they visit the website first time "welcome to my portfolio is displayed" otherwise "welcome back to my portfolio and time" are displayed.
 
 ```JS
 <script>

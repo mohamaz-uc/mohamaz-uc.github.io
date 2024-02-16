@@ -395,6 +395,8 @@
               fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
               </script>
             </div>
+            <div id="greeting-root"></div>
+            <div id="greetingCookie">Hello</div>
         </div>
       </section>
       
@@ -473,6 +475,20 @@
           }
           return "";
       }
+
+      function welcomeUser() {
+          const lastVisit = getCookie("lastVisit");
+          const greetingElement = document.getElementById("greetingCookie");
+          if (lastVisit) {
+              greetingElement.innerHTML = "Welcome back! Your last visit was on " + lastVisit + ".";
+          } else {
+              greetingElement.innerHTML = "Welcome to my portfolio!";
+          }
+          const now = new Date();
+          setCookie("lastVisit", now.toLocaleString(), 365);
+      }
+
+      welcomeUser();
   </script>
 
       <!-- Template Main JS File -->
