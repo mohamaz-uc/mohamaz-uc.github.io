@@ -8,7 +8,7 @@
 
 **Email**: mohamaz@mail.uc.edu
 
-![Tulasiram Nakkanaboina](images/headshot.jpeg)
+![Afroz Mohammad](images/headshot.jpeg)
 
 
 ## Individual Project 1 - Professional Profile Website
